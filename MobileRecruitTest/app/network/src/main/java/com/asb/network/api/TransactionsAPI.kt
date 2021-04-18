@@ -6,5 +6,5 @@ import retrofit2.http.GET
 
 interface TransactionsAPI {
     @get:GET("transactions")
-    val transactionsList: Call<List<Transaction?>?>?
+    val transactionsList: Call<List<Transaction>>
 }

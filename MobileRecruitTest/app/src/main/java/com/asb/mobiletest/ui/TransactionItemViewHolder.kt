@@ -1,20 +1,15 @@
 package com.asb.mobiletest.ui
 
-import android.os.CountDownTimer
 import android.view.View
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.plexure.theo.R
+import com.asb.mobiletest.R
 
-class TransactionItemViewHolder(val rootView: View) : RecyclerView.ViewHolder(rootView) {
+class TransactionItemViewHolder(val view: View) : RecyclerView.ViewHolder(view) {
 
-    val tvOfferTime: TextView = rootView.findViewById(R.id.tv_card_offer_time)
-    val tvOfferTitle: TextView = rootView.findViewById(R.id.tv_card_offer_title)
-    val tvNormalPrice: TextView = rootView.findViewById(R.id.tv_card_normal_price)
-    val tvSalePrice: TextView = rootView.findViewById(R.id.tv_card_sale_price)
-    val ivThumbnail: ImageView = rootView.findViewById(R.id.iv_card_offer_thumbnail)
-
-    var countDownTimer: CountDownTimer? = null
-
+    val tvTransactionId: TextView = view.findViewById(R.id.transaction_id)
+    val tvTransactionDate: TextView = view.findViewById(R.id.transaction_date)
+    val tvSummary: TextView = view.findViewById(R.id.summary)
+    val tvDebit: TextView = view.findViewById(R.id.debit)
+    val tvCredit: TextView = view.findViewById(R.id.credit)
 }
