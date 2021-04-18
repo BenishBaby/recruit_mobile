@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">MobileRecruitTest</string>
+    <string name="credit_label">Credit</string>
+    <string name="debit_label">Debit</string>
+    <string name="gst_label">GST</string>
+    <string name="transaction_error">Unable to fetch transactions</string>
+</resources>
