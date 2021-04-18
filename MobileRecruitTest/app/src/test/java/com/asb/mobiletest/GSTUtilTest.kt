@@ -1,5 +1,6 @@
 package com.asb.mobiletest
 
+import com.asb.mobiletest.util.GSTUtil
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -9,9 +10,14 @@ import org.junit.Assert.*
  *
  * See [testing documentation](http://d.android.com/tools/testing).
  */
-class ExampleUnitTest {
+class GSTUtilTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun calculateGSTTest() {
+        var result = GSTUtil.calculateGST(0.0)
+        assertEquals(0.0, result, 0.0)
+        result = GSTUtil.calculateGST(100.0)
+        assertEquals(15.0, result, 0.0)
+        result = GSTUtil.calculateGST(-100.0)
+        assertEquals(0.0, result, 0.0)
     }
 }

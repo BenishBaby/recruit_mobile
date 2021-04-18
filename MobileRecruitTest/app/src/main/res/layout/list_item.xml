@@ -40,13 +40,22 @@
                 android:id="@+id/credit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scaleType="centerCrop" />
+                android:scaleType="centerCrop"
+                android:background="@android:color/holo_green_dark"/>
 
             <TextView
                 android:id="@+id/debit"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:scaleType="centerCrop" />
+                android:scaleType="centerCrop"
+                android:background="@android:color/holo_red_dark"/>
+            <TextView
+                android:id="@+id/gst"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:background="@android:color/holo_blue_light"
+                />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

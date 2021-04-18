@@ -19,7 +19,8 @@ class TransactionRepositoryImpl: TransactionRepository {
                 response: Response<List<Transaction>>
             ) {
                 val transactionList: List<Transaction>? = response.body()
-                transactions.value = transactionList
+                transactions.value =  transactionList?.sortedBy { selector(it) }
+
             }
 
             override fun onFailure(call: Call<List<Transaction>>, t: Throwable) {
@@ -28,4 +29,6 @@ class TransactionRepositoryImpl: TransactionRepository {
         })
         return transactions
     }
+
+    fun selector(transaction: Transaction): Double = transaction.credit
 }

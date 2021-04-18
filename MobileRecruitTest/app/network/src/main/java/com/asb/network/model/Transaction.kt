@@ -8,23 +8,26 @@ data class Transaction(
     val id: String? = "",
     val transactionDate: String? = "",
     val summary: String? = "",
-    val debit: Float = 0.0f,
-    val credit: Float = 0.0f
+    val debit: Double = 0.0,
+    val credit: Double = 0.0,
+    val gst: Double = 0.0
 ): Parcelable {
     constructor(parcel: Parcel) : this(
-        parcel.readString(),
-        parcel.readString(),
-        parcel.readString(),
-        parcel.readFloat(),
-        parcel.readFloat()
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readString(),
+            parcel.readDouble(),
+            parcel.readDouble(),
+            parcel.readDouble()
     )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(id)
         parcel.writeString(transactionDate)
         parcel.writeString(summary)
-        parcel.writeFloat(debit)
-        parcel.writeFloat(credit)
+        parcel.writeDouble(debit)
+        parcel.writeDouble(credit)
+        parcel.writeDouble(gst)
     }
 
     override fun describeContents(): Int {

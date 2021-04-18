@@ -27,7 +27,7 @@ class TransactionsAdapter(private val context: Context, private val transactionL
         holder.tvTransactionId.text = transaction.id
         holder.tvTransactionDate.text = transaction.transactionDate
         holder.tvSummary.text = transaction.summary
-        holder.tvDebit.text = String.valueOf(transaction.debit)
+        holder.tvDebit.text = String.valueOf(transaction.credit)
         holder.tvCredit.text = String.valueOf(transaction.debit)
         holder.view.setOnClickListener {
             clickCallBack.onListItemSelected(transactionList[position])

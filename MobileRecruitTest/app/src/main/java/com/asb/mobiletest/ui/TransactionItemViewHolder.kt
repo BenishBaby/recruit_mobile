@@ -12,4 +12,5 @@ class TransactionItemViewHolder(val view: View) : RecyclerView.ViewHolder(view) 
     val tvSummary: TextView = view.findViewById(R.id.summary)
     val tvDebit: TextView = view.findViewById(R.id.debit)
     val tvCredit: TextView = view.findViewById(R.id.credit)
+    val tvGST: TextView = view.findViewById(R.id.credit)
 }
